@@ -1,0 +1,68 @@
+name:                gpu-vulkan-middle-khr-swapchain
+version:             0.1.0.0
+github:              "YoshikuniJujo/gpu-vulkan-middle-khr-swapchain"
+license:             BSD-3-Clause
+author:              "Yoshikuni Jujo"
+maintainer:          "yoshikuni.jujo@gmail.com"
+copyright:           "(c) 2025 Yoshikuni Jujo"
+
+extra-doc-files:
+- README.md
+- CHANGELOG.md
+
+# Metadata used when publishing your package
+synopsis:            medium wrapper for VK_KHR_swapchain extension of the Vulkan API
+category:            GPU
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/YoshikuniJujo/gpu-vulkan-middle-khr-swapchain#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- text < 3
+- data-default < 1
+- gpu-vulkan-middle < 1
+- gpu-vulkan-middle-khr-surface < 1
+- gpu-vulkan-core < 1
+- gpu-vulkan-core-khr-swapchain < 1
+- c-enum < 1
+- storable-peek-poke < 1
+- typelevel-tools-yj < 1
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Widentities
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wmissing-export-lists
+- -Wmissing-home-modules
+- -Wpartial-fields
+- -Wredundant-constraints
+
+library:
+  source-dirs: src
+
+executables:
+  gpu-vulkan-middle-khr-swapchain-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - gpu-vulkan-middle-khr-swapchain
+
+tests:
+  gpu-vulkan-middle-khr-swapchain-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - gpu-vulkan-middle-khr-swapchain
