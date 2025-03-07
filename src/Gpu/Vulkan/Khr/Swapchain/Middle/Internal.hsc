@@ -17,7 +17,7 @@ module Gpu.Vulkan.Khr.Swapchain.Middle.Internal (
 
 	-- * CREAET AND DESTROY
 
-	create, recreate, destroy, S, CreateInfo(..),
+	create, recreate, destroy, S(..), CreateInfo(..),
 
 	-- * GET IMAGES
 
