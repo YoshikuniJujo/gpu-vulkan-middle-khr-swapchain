@@ -25,7 +25,7 @@ module Gpu.Vulkan.Khr.Swapchain.Middle.Internal (
 
 	-- * INTERNAL USE
 
-	sToCore,
+	sToCore, sFromCore,
 
 	-- * ACQUIRE NEXT IMAGE
 
